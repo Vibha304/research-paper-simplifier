@@ -7,6 +7,7 @@ pydantic>=2.6,<3.0          # validated domain models
 requests>=2.31,<3.0         # only used by the optional Ollama engine
 fpdf2>=2.7.8,<3.0           # PDF export
 python-dotenv>=1.0,<2.0     # .env configuration
+pysqlite3-binary>=0.5; sys_platform == "linux"   # modern SQLite for cloud hosts (skipped on Windows/macOS)
 
 # Development
 pytest>=8.0
