@@ -1,0 +1,36 @@
+{
+  // Terminal > Run Task...
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "1. Create virtual environment",
+      "type": "shell",
+      "command": "python3 -m venv .venv",
+      "windows": { "command": "py -m venv .venv" },
+      "problemMatcher": []
+    },
+    {
+      "label": "2. Install requirements",
+      "type": "shell",
+      "command": ".venv/bin/python -m pip install --upgrade pip && .venv/bin/python -m pip install -r requirements.txt",
+      "windows": { "command": ".venv\\Scripts\\python.exe -m pip install --upgrade pip; .venv\\Scripts\\python.exe -m pip install -r requirements.txt" },
+      "problemMatcher": []
+    },
+    {
+      "label": "Run app",
+      "type": "shell",
+      "command": ".venv/bin/python -m streamlit run app.py",
+      "windows": { "command": ".venv\\Scripts\\python.exe -m streamlit run app.py" },
+      "isBackground": true,
+      "problemMatcher": []
+    },
+    {
+      "label": "Run tests",
+      "type": "shell",
+      "command": ".venv/bin/python -m pytest -q",
+      "windows": { "command": ".venv\\Scripts\\python.exe -m pytest -q" },
+      "group": "test",
+      "problemMatcher": []
+    }
+  ]
+}

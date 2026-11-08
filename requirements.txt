@@ -1,0 +1,12 @@
+# Research Paper Simplifier - all free & open source, runs fully offline.
+# Python 3.10 - 3.13. Nothing else to install: the built-in engine needs no AI model.
+streamlit>=1.40,<2.0        # UI (st.navigation, st.status, st.write_stream)
+pymupdf>=1.24,<3.0          # PDF text extraction
+chromadb>=0.5,<2.0          # local vector database
+pydantic>=2.6,<3.0          # validated domain models
+requests>=2.31,<3.0         # only used by the optional Ollama engine
+fpdf2>=2.7.8,<3.0           # PDF export
+python-dotenv>=1.0,<2.0     # .env configuration
+
+# Development
+pytest>=8.0

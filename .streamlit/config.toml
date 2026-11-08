@@ -1,0 +1,9 @@
+[server]
+maxUploadSize = 50          # MB - keep in sync with RPS_MAX_FILE_SIZE_MB
+headless = true
+
+[browser]
+gatherUsageStats = false    # fully offline: no telemetry
+
+[theme]
+primaryColor = "#2563eb"
